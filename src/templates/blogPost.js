@@ -1,14 +1,23 @@
 import React from "react";
 import { graphql, Link } from "gatsby";
+import Header from "../components/Header.js";
 
 const Template = ({ data, pathContext }) => {
 	const title = data.markdownRemark.frontmatter.title;
 	const date = data.markdownRemark.frontmatter.date;
 	const html = data.markdownRemark.html;
 	const { next, prev } = pathContext;
+	const siteTitle = data.site.siteMetadata.title;
 
 	return (
-		<div>
+		<>
+		<Header siteTitle={siteTitle} />
+		<div
+			style={{
+				margin: `0 auto`,
+				maxWidth: 960,
+				padding: `0 1.0875rem 1.45rem`,
+			}}>
 			<h1>{title}</h1>
 			<div>
 				<em>{date}</em>
@@ -38,11 +47,17 @@ const Template = ({ data, pathContext }) => {
 				)}
 			</p>
 		</div>
+		</>
 	);
 };
 
 export const postQuery = graphql`
 	query($pathSlug: String!) {
+		site(children: {}, siteMetadata: {title: {}, description: {}}) {
+    siteMetadata {
+      title
+    }
+  },
 		markdownRemark(frontmatter: { path: { eq: $pathSlug } }) {
 			html
 			frontmatter {

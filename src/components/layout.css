@@ -8,6 +8,7 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+
 article,
 aside,
 details,
@@ -185,7 +186,7 @@ textarea {
   font: inherit;
 }
 html {
-  font: 112.5%/1.45em georgia, serif;
+  font: 112.5%/1.45em monospace;
   box-sizing: border-box;
   overflow-y: scroll;
 }
@@ -200,7 +201,7 @@ html {
 }
 body {
   color: hsla(0, 0%, 0%, 0.8);
-  font-family: georgia, serif;
+  font-family: monospace;
   font-weight: normal;
   word-wrap: break-word;
   font-kerning: normal;
@@ -619,4 +620,17 @@ pre tt:after {
   html {
     font-size: 100%;
   }
+}
+
+footer{
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+}
+
+
+.blogPostLink:hover{
+  text-decoration: underline!import;
 }

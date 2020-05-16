@@ -14,14 +14,21 @@ const IndexPage = ({ data }) => {
 					const { frontmatter } = edge.node;
 					return (
 						<div key={frontmatter.path}>
-							<Link to={frontmatter.path}>{frontmatter.title}</Link>
+							<Link className="blogPostLink"
+              style={{
+                textDecoration:`none`,
+                fontSize:25,
+                color:`darkolivegreen`
+              }}
+              to={frontmatter.path}>{frontmatter.title}</Link>
 							&nbsp;
+              <br/>
 							<small>
 								{' '}
-								<em>published on</em> {frontmatter.date}
+								{frontmatter.date}
 							</small>
-							<p>{frontmatter.excerpt}</p>
 							<br />
+              <br />
 						</div>
 					);
 				})}
