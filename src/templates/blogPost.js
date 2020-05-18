@@ -1,7 +1,7 @@
 import React from "react";
 import { graphql, Link } from "gatsby";
-import Header from "../components/Header.js";
-import Footer from "../components/Footer.js";
+import Header from "../components/header";
+import Footer from "../components/footer";
 import "../components/style.css";
 
 const Template = ({ data, pathContext }) => {
