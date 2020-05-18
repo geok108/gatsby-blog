@@ -1,5 +1,6 @@
+
 html {
-  font-family: sans-serif;
+  font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
   -ms-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
 }
@@ -95,7 +96,7 @@ code,
 kbd,
 pre,
 samp {
-  font-family: monospace, monospace;
+  font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
   font-size: 1em;
 }
 figure {
@@ -201,10 +202,11 @@ html {
 }
 body {
   color: hsla(0, 0%, 0%, 0.8);
-  font-family: monospace;
+  font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
   font-weight: normal;
   word-wrap: break-word;
   font-kerning: normal;
+  line-height: normal;
   -moz-font-feature-settings: "kern", "liga", "clig", "calt";
   -ms-font-feature-settings: "kern", "liga", "clig", "calt";
   -webkit-font-feature-settings: "kern", "liga", "clig", "calt";
@@ -622,15 +624,43 @@ pre tt:after {
   }
 }
 
+/* mine */
+header{
+  margin-bottom: 1.45rem;
+}
+
+.header{
+  margin: 0 auto;
+  max-width: 960px;
+  padding: 1.45rem 1.0875rem;
+}
 footer{
-  position: fixed;
-  left: 0;
-  bottom: 0;
+  position: absolute;
+  left: 0px;
+  bottom: 0px;
   width: 100%;
   text-align: center;
 }
 
+.container{
+  min-height: 100%;
+  margin: 0 auto;
+  max-width: 960px;
+  padding: 0 1.0875rem 1.45rem;
+  position: relative;
+}
+
+.blogPostLink{
+  text-decoration: none;
+  font-size:25px;
+  color:#40376E;
+}
 
 .blogPostLink:hover{
-  text-decoration: underline!import;
+  text-decoration: underline!important;
+  color:#36558F;
+}
+
+.blogpost{
+  line-height: 2.0;
 }

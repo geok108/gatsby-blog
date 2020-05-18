@@ -4,6 +4,7 @@ import { Link } from "gatsby"
 import Layout from "../components/layout"
 import Image from "../components/image"
 import SEO from "../components/seo"
+import "../components/style.css"
 
 const IndexPage = ({ data }) => {
   const { edges } = data.allMarkdownRemark;
@@ -15,11 +16,6 @@ const IndexPage = ({ data }) => {
 					return (
 						<div key={frontmatter.path}>
 							<Link className="blogPostLink"
-              style={{
-                textDecoration:`none`,
-                fontSize:25,
-                color:`darkolivegreen`
-              }}
               to={frontmatter.path}>{frontmatter.title}</Link>
 							&nbsp;
               <br/>

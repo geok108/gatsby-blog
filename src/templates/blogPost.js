@@ -1,6 +1,8 @@
 import React from "react";
 import { graphql, Link } from "gatsby";
 import Header from "../components/Header.js";
+import Footer from "../components/Footer.js";
+import "../components/style.css";
 
 const Template = ({ data, pathContext }) => {
 	const title = data.markdownRemark.frontmatter.title;
@@ -46,6 +48,7 @@ const Template = ({ data, pathContext }) => {
 					</Link>
 				)}
 			</p>
+			<Footer />
 		</div>
 		</>
 	);
